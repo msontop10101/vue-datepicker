@@ -22,9 +22,8 @@
                 :close-menu="() => $emit('close')"
                 :toggle-menu="() => $emit('toggle')"
             />
-            <input
-                v-if="!$slots['dp-input']"
-                :id="uid ? `dp-input-${uid}` : undefined"
+            <!-- :value="inputValue" [I removed this part of the code] -->
+            <button
                 ref="inputRef"
                 :name="name"
                 :class="inputClass"
@@ -33,7 +32,7 @@
                 :disabled="disabled"
                 :readonly="readonly"
                 :required="required"
-                :value="inputValue"
+                
                 :autocomplete="autocomplete"
                 :aria-label="defaultedAriaLabels?.input"
                 :aria-disabled="disabled || undefined"
@@ -46,8 +45,35 @@
                 @keypress="handleKeyPress"
                 @keydown="handleKeyPress"
                 @paste="handlePaste"
-            />
-            <div @click="emit('toggle')">
+                style="height: 48px; backgroundColor: red;">
+                Schedule For
+            </button>
+            <!-- <input
+                v-if="!$slots['dp-input']"
+                :id="uid ? `dp-input-${uid}` : undefined"
+                ref="inputRef"
+                :name="name"
+                :class="inputClass"
+                :inputmode="defaultedTextInput.enabled ? 'text' : 'none'"
+                :placeholder="placeholder"
+                :disabled="disabled"
+                :readonly="readonly"
+                :required="required"
+                
+                :autocomplete="autocomplete"
+                :aria-label="defaultedAriaLabels?.input"
+                :aria-disabled="disabled || undefined"
+                :aria-invalid="state === false ? true : undefined"
+                @input="handleInput"
+                @keydown.enter="handleEnter"
+                @keydown.tab="handleTab"
+                @blur="handleBlur"
+                @focus="handleFocus"
+                @keypress="handleKeyPress"
+                @keydown="handleKeyPress"
+                @paste="handlePaste"
+            /> -->
+            <!-- <div @click="emit('toggle')">
                 <span v-if="$slots['input-icon'] && !hideInputIcon" class="dp__input_icon" @click="emit('toggle')"
                     ><slot name="input-icon"
                 /></span>
@@ -56,18 +82,18 @@
                     class="dp__input_icon dp__input_icons"
                     @click="emit('toggle')"
                 />
-            </div>
+            </div> -->
             <span
                 v-if="$slots['clear-icon'] && inputValue && clearable && !disabled && !readonly"
                 class="dp__clear_icon"
                 ><slot name="clear-icon" :clear="onClear"
             /></span>
-            <CancelIcon
+            <!-- <CancelIcon
                 v-if="clearable && !$slots['clear-icon'] && inputValue && !disabled && !readonly"
                 class="dp__clear_icon dp__input_icons"
                 data-test="clear-icon"
                 @click.prevent="onClear($event)"
-            />
+            /> -->
         </div>
     </div>
 </template>

@@ -1,6 +1,6 @@
 import { flushPromises, mount, VueWrapper } from '@vue/test-utils';
 
-import VueDatePicker from '@/VueDatePicker.vue';
+import VueDatePicker from '@/VueDatePickerModified.vue';
 
 import type { AllPropsType } from '@/props';
 import { resetDateTime } from '@/utils/date-utils';

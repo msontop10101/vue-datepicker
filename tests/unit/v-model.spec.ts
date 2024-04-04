@@ -14,7 +14,7 @@ import {
 } from 'date-fns';
 import { describe, it, expect } from 'vitest';
 
-import VueDatepicker from '@/VueDatePicker.vue';
+import VueDatepicker from '@/VueDatePickerModified.vue';
 import { resetDateTime } from '@/utils/date-utils';
 import type { AllPropsType } from '@/props';
 

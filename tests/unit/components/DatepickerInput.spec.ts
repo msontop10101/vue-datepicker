@@ -3,7 +3,7 @@ import { mount, VueWrapper } from '@vue/test-utils';
 import { addDays, format, getHours, getMinutes, set } from 'date-fns';
 
 import DatepickerInput from '@/components/DatepickerInput.vue';
-import DatePicker from '@/VueDatePicker.vue';
+import DatePicker from '@/VueDatePickerModified.vue';
 
 import type { ComponentPublicInstance } from 'vue';
 

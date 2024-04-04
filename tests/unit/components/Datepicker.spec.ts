@@ -15,7 +15,7 @@ import {
 } from 'date-fns';
 import { ja } from 'date-fns/locale';
 
-import MainComponent from '@/VueDatePicker.vue';
+import MainComponent from '@/VueDatePickerModified.vue';
 import DatepickerMenu from '@/components/DatepickerMenu.vue';
 import DpCalendar from '@/components/DatePicker/DpCalendar.vue';
 import DatePicker from '@/components/DatePicker/DatePicker.vue';
