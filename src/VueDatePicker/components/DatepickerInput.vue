@@ -45,7 +45,7 @@
                 @keypress="handleKeyPress"
                 @keydown="handleKeyPress"
                 @paste="handlePaste"
-                style="height: 48px; backgroundColor: red;">
+                style="height: 48px; color:#707070;">
                 Schedule For
             </button>
             <!-- <input
