@@ -1555,7 +1555,7 @@ const Bl = ({
             onFocus: te,
             onKeypress: V,
             onPaste: H,
-            style: { height: "48px", color: "#707070" }
+            style: { height: "48px", color: "#707070", border: "none" }
           }, " Schedule For ", 42, Ll),
           g.$slots["clear-icon"] && e.inputValue && g.clearable && !g.disabled && !g.readonly ? (T(), Q("span", Wl, [
             ie(g.$slots, "clear-icon", { clear: ee })
